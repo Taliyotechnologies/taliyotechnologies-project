@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harsh &lt;budhauliya&gt;</title>
+  <meta name="description" content="Harsh Bartoletti - Creative Developer. Merging technical expertise with creativity and aesthetics.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="fav.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="about.css">
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<body>
+
+    <!-- ...............HEADER START............... -->
+
+
+
+
+<header>
+  
+    <div class="header-title">
+        harsh &lt;<span>budhauliya</span>&gt;
+    </div>
+    <div class="window-controls">
+      <i class="fa-solid fa-minus" onclick="exitFullScreen()"></i>
+      <i class="fa-regular fa-square" onclick="enterFullScreen()"></i>
+        <i class="fa-solid fa-xmark cut-icon"></i>
+    </div>
+</header>
+
+
+
+<!-- ...............HEADER END............... -->
+
+
+
+
+
+
+<!-- ...............NAVIGATION START............... -->
+
+
+<div class="slide-navigation">
+    <div class="logo">
+      <i class="fa-brands fa-staylinked navlogo"></i>
+    </div>
+
+   <div class="nav-icons">
+  <a href="home.html">
+    <i class="fa-solid fa-house home"></i>
+    <span class="tooltip">home</span>
+  </a>
+  <a href="about.html">
+    <i class="fa-regular fa-address-card about-me"></i>
+    <span class="tooltip">about</span>
+  </a>
+  <a href="project.html">
+    <i class="fa-solid fa-laptop-code project"></i>
+    <span class="tooltip">projects</span>
+  </a>
+  <a href="contact.html">
+    <i class="fa-regular fa-message contact"></i>
+    <span class="tooltip">contact</span>
+  </a>
+</div>
+
+
+    <button id="openBtn">
+      <i class="fa-solid fa-magnifying-glass navsearch"></i>
+    </button>
+
+    <div class="slide-panel" id="slidePanel">
+      <p class="panel-heading">Find <span class="blue">anything</span></p>
+      <button id="closeBtn">✖</button>
+
+      <input type="text" class="search-input" placeholder="Search here...">
+
+      <div class="box-row">
+
+          <a href="home.html" class="box green-1" style="text-decoration: none; color: inherit;">
+            <div class="box-header-search home-i">
+              <i class="fa-solid fa-house"></i>
+              home
+            </div>
+            <p>Welcome! Start your journey here!</p>
+          </a>
+
+          <a class="box blue-1" href="about.html" style="text-decoration: none; color: inherit;">
+            <div class="box-header-search aboutme-i">
+              <i class="fa-regular fa-address-card"></i>
+              about
+            </div>
+            <p>Learn more about me and my work.</p>
+          </a>
+
+
+          <a class="box red-1" href="project.html" style="text-decoration: none; color: inherit;">
+            <div class="box-header-search project-i">
+              <i class="fa-solid fa-laptop-code"></i>
+              projects
+            </div>
+            <p>Explore my projects and collaborations.</p>
+          </a>
+      </div>
+
+      <div class="box-row">
+
+
+        <a class="box yellow-1" href="contact.html" style="text-decoration: none; color: inherit;">
+          <div class="box-header-search contact-i">
+            <i class="fa-regular fa-message"></i>
+            contact
+          </div>
+          <p>Explore my projects and collaborations.</p>
+        </a>
+
+
+
+        <a class="box purple-1" href="privacy.html" style="text-decoration: none; color: inherit;">
+          <div class="box-header-search settings-i">
+            <i class="fa-solid fa-gear"></i>
+            settings
+          </div>
+          <p>Explore my projects and collaborations.</p>
+        </a>
+
+        <div class="box-unvisible"></div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+<div class="line-main"></div>
+
+
+
+
+<!-- ...............NAVIGATION END............... -->
+
+
+
+
+
+
+<!-- ...............MAIN CONTENT START............... -->
+
+<div class="container">
+  <div class="floating-elements">
+    <span class="float-item">v</span>
+    <span class="float-item">&</span>
+    <span class="float-item">!</span>
+    <span class="float-item">~</span>
+  </div>
+  
+   
+  <p class="home-main">Home</p>
+  <h1>Let’s get to<br> know <span>each other</span></h1>
+  <p class="home-para">Let me introduce myself, my workflows, my collaborations, and the technologies I like to use to bring my projects to life.</p>
+</div>
+<div class="progress-line">
+  <div class="light"></div>
+</div>
+
+
+
+
+
+
+
+<!-- ...............MAIN CONTENT END............... -->
+
+
+
+
+<!-- ...............ABOUT  START............... -->
+
+
+
+<section class="about-maincontainer">
+  <h1 class="main-heading">Your <span>creative</span> web developer</h1>
+
+
+  <div class="workspace" id="aboutWorkspace">
+
+    <div class="draggable-box" id="box1" data-aos="fade-up">
+      <div class="nav">
+        <span class="about-navhead">about-me</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+      <div class="all-content">
+        <ol>
+          <li>Nice to meet you! I'm Stefano, I'm a <span class="green">Freelance Web Developer</span>.</li>
+
+          <li>I'm passionate about both<span class="blue"> web design</span> and<span class="red"> web development</span>, with a particular focus on<span class="yellow"> front-end development</span> in all of its aspects. This is where both my<span class="purple"> technical</span> and<span class="light-blue"> creative</span> skills can be used at their best.</li>
+
+          <li>I bring my<span class="green"> expertise</span> in my collaborations with<span class="yellow"> web agencies</span>,<span class="blue"> design studios </span> , and other<span class="red"> freelance professionals</span> in the field, to add value to the projects I work on.</li>
+          
+          <li><span class="blue">Coding</span> for me is not just my work, I like<span class="red">   experimenting </span>with many <span class="yellow">technologies</span>and I also maintain some <span class="blue"> personal projects</span>. Whenever I can, I like to contribute to <span class="green">open-source   </span>to give back to the community.</li>
+          
+        </ol>
+    </div>
+    </div>
+
+    <div class="draggable-box" id="box2" data-aos="fade-up">
+      <div class="nav">
+        <span class="work-navhead">where-i-work</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+      <div class="all-content">
+        <ol>
+          <li> I'm currently working as a Freelance Web Developer.</li>
+          <li> I'm currently working as a Freelance Web Developer.</li>
+        </ol>
+      </div>     
+    </div>
+
+    <div class="draggable-box" id="box3" data-aos="fade-up">
+      <div class="nav">
+        <span class="photo-navhead">my-profile</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+      <div class="photo-content">
+        <img src="harsh-min.jpeg" alt="My Profile" class="profile-photo">
+      </div>     
+    </div>
+
+    <div class="draggable-box" id="box4" data-aos="fade-up">
+      <div class="nav">
+        <span class="hobbies-navhead">hobbies</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+      <div class="all-content">
+        <ol>
+          <li>🎮 Gamming</li>
+          <li>🚵‍♂️ Traveling</li>
+          <li>📖 Reading</li>
+          <li>⛹️ Bolly-ball</li>
+          <li>🏊‍♂️ Swimming</li>
+        </ol>
+      </div>     
+    </div>
+
+    <div class="draggable-box" id="box5" data-aos="fade-up">
+      <div class="nav">
+        <span class="hobbies-navhead">hobbies</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+      <div class="all-content">
+        <ol>
+          <li>Instagram ⋰</li>
+          <li>Facebook ⋰</li>
+          <li>Twitter ⋰</li>
+          <li>Linkedin ⋰</li>
+          <li>Git-hub ⋰</li>
+        </ol>
+      </div>     
+    </div>  
+  </div>
+  
+  
+
+
+  
+</section>
+
+
+
+
+
+<!-- ...............ABOUT  END............... -->
+
+
+
+<!-- ...............tech  start............... -->
+
+<h1 class="tech-heading">Some of the techs I like to <span>creative</span></h1>
+
+<section class="tech-section" >
+  
+  <div class="vertical-line"></div>
+
+  <div class="tech-box" data-aos="fade-up">
+    <div class="tech-nav">
+        <span class="tech-navhead">about-me</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+    <div class="tech-grid">
+      <div class="tech" data-aos="fade-up"><img src="https://a.storyblok.com/f/274945/0x0/34b662cf7b/tech-nuxt.svg" alt="Nuxt" /></div>
+      <div class="tech" data-aos="fade-up"><img src="https://a.storyblok.com/f/274945/0x0/38dc0ebb9d/tech-vue.svg" alt="Vue.js" /></div>
+      <div class="tech" data-aos="fade-up"><img src="https://a.storyblok.com/f/274945/0x0/341bfdfbe2/tech-tailwind.svg" alt="Tailwind" /></div>
+      <div class="tech" data-aos="fade-up"><img src="https://a.storyblok.com/f/274945/0x0/81f3f4682d/tech-gsap.svg" alt="GSAP" /></div>
+      <div class="tech" data-aos="fade-up"><img src="https://a.storyblok.com/f/274945/0x0/3fd27115a5/tech-javascript.svg" alt="JavaScript" /></div>
+      <div class="tech" data-aos="fade-up"><img src="https://a.storyblok.com/f/274945/0x0/4db6a525ec/tech-css.svg" alt="CSS" /></div>
+      <div class="tech" data-aos="fade-up"><img src="https://a.storyblok.com/f/274945/0x0/8a3c28c8e8/tech-storyblok.svg" alt="Storyblok" /></div>
+      <div class="tech" data-aos="fade-up"><img src="https://a.storyblok.com/f/274945/0x0/991b2c59ac/tech-netlify.svg" alt="Netlify" /></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ...............tach  END............... -->
+
+
+
+<!-- ...............testimonials  start............... -->
+
+
+<section id="testimonial-slider-section">
+  <h1 class="testimonial-heading">Nice things<span> people say</span> about my work</h1>
+  
+   <div class="slider-container">
+  
+    <div class="slider-wrapper" id="sliderWrapper">
+      <div class="slide">
+        <div class="nav">
+        <span class="client-navhead">hobbies</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+        <div class="testimonial bg-info text-white">
+          <div class="client-image">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg  " alt="Client Image">
+          </div>
+          <div class="testimonial-text">
+          <p>Working with Taliyo Technologies has been an absolute game-changer for my business. From the very first meeting, the team understood exactly what I needed. They patiently listened to my ideas, gave me professional input, and transformed everything into a beautiful, functional website. Their creative approach, clean design, and on-time delivery were truly impressive. I constantly receive compliments from my clients about how professional my website looks. I would 100% recommend Taliyo to anyone looking for high-quality development."</p>
+          <h5>— Anjali Sharma, E-commerce Store Owner</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide active">
+        <div class="nav">
+        <span class="client-navhead">hobbies</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+        <div class="testimonial bg-info text-white">
+          <div class="client-image">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg  " alt="Client Image">
+          </div>
+          <div class="testimonial-text">
+          <p>"I approached Taliyo Technologies for complete branding and website development. What I got was not just a website, but a complete digital identity that reflected my brand perfectly. The team took care of every detail—from logo design to social media setup—and made sure everything looked consistent and professional. They even helped me with content writing and SEO, which brought real traffic to my site. I'm proud to say my business now has a powerful online presence, all thanks to Taliyo."</p>
+          <h5>— Rohan Mehta, Startup Founder</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="nav">
+        <span class="client-navhead">hobbies</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+        <div class="testimonial bg-primary text-white">
+          <div class="client-image">
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Client Image">
+          </div>
+          <div class="testimonial-text">
+          <p>"Taliyo Technologies took our local restaurant online and made it thrive. We opted for their full digital marketing pack including social media management, website, and Google listing. Within just a few weeks, we started noticing more orders, more calls, and better engagement on our Instagram page. Their strategy was smart, their execution was smooth, and the results were visible. I’m so happy I chose them for this journey and will continue working with them for future growth."</p>
+          <h5>— Priya Verma, Restaurant Owner</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide active">
+        <div class="nav">
+        <span class="client-navhead">hobbies</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+        <div class="testimonial bg-info text-white">
+          <div class="client-image">
+            <img src=" https://randomuser.me/api/portraits/women/33.jpg" alt="Client Image">
+          </div>
+          <div class="testimonial-text">
+          <p>"I needed a website with custom backend functionalities for my real estate listings, and Taliyo Technologies delivered more than I expected. Their team is highly skilled in both frontend and backend development. They created a clean, fast, and easy-to-manage site for me. I can now add properties, manage leads, and update listings on my own. Their work ethic, clarity in communication, and post-launch support was fantastic."</p>
+          <h5>— Sneha Rathi, Boutique Owner</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide active">
+        <div class="nav">
+        <span class="client-navhead">hobbies</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+        <div class="testimonial bg-info text-white">
+          <div class="client-image">
+            <img src=" https://randomuser.me/api/portraits/men/19.jpg" alt="Client Image">
+          </div>
+          <div class="testimonial-text">
+          <p>"I purchased one of Taliyo Technologies’ combo packs for my new clothing brand, and I couldn’t be more satisfied. It included everything I needed—logo, visiting card design, website, hosting, and even basic ad setup. Their designs were modern and fit my style perfectly. Best part? They delivered everything within the promised time. They made my launch smooth and stress-free. If you're starting something new, trust Taliyo—they’ll take care of everything."</p>
+          <h5>— Vikas Agarwal, Real Estate Consultant</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide active">
+        <div class="nav">
+        <span class="client-navhead">hobbies</span>
+        <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+          </div>
+      </div>
+        <div class="testimonial bg-info text-white">
+          <div class="client-image">
+            <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Client Image">
+          </div>
+          <div class="testimonial-text">
+          <p>"I approached Taliyo Technologies for complete branding and website development. What I got was not just a website, but a complete digital identity that reflected my brand perfectly. The team took care of every detail—from logo design to social media setup—and made sure everything looked consistent and professional. They even helped me with content writing and SEO, which brought real traffic to my site. I'm proud to say my business now has a powerful online presence, all thanks to Taliyo."</p>
+          <h5>— Priya Verma, Restaurant Owner</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </section>
+
+    <section class="collaborations">
+    <div class="nav-last">
+      <span class="client-navhead-last">hobbies</span>
+      <div class="nav-icons-about">
+        <i class="fa-solid fa-minus"></i>
+        <i class="fa-regular fa-square"></i>
+        <i class="fa-solid fa-xmark cut-icon"></i>
+      </div>
+    </div>
+    <div class="colabs">
+      <div class="client-image-last">
+        <img src="harsh-min.jpeg" alt="Client Image">
+      </div>
+      <div class="testimonial-text">
+        <h1 class="client-heading">Let’s work together on your next project</h1>
+        
+        <a href="contact.html">
+        <button class="client-button">
+          <span class="char">l</span>
+          <span class="char">e</span>
+          <span class="char">t</span>
+          <span class="char">'</span>
+          <span class="char">s</span>
+          <span class="char">-</span>
+          <span class="char">g</span>
+          <span class="char">e</span>
+          <span class="char">t</span>
+          <span class="char">-</span>
+          <span class="char">i</span>
+          <span class="char">n</span>
+          <span class="char">-</span>
+          <span class="char">t</span>
+          <span class="char">o</span>
+          <span class="char">c</span>
+          <span class="char">h</span>
+          <span class="arrow"> →</span>
+        </button>
+        </a>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+<!-- ...............testimonials  END............... -->
+
+
+
+<!-- ...............footer start ............... -->
+
+
+
+<footer class="footer">
+  <div class="footer-left">
+
+    <div class="footer-logo">
+      <i class="fa-brands fa-staylinked navlogo"></i>
+      harsh &lt;<span>budhauliya</span>&gt;
+    </div>
+    <div class="footer-copyright">
+      &copy; 2024 Harsh Budhauliya | Freelance Developer - All rights reserved.
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <div class="footer-links">
+      <a href="home.html">home</a>
+      <a href="about.html">about</a>
+      <a href="project.html">projects</a>
+      <a href="contact.html">contact</a>
+    </div>
+
+    <div class="footer-privacy">
+      <a href="privacy.html">privacy Policy</a>
+      <a href="terms.html">terms of Service</a>
+
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ...............footer end............... -->
+
+
+
+<!-- ...............TIME START............... -->
+
+
+
+
+<div class="bottom-bar" id="location-time">
+  Based in India • Local time <span id="india-time">--:--</span>
+  <a href="contact.html" class="cover-link">
+    <button class="time-button"><a href="contact.html">Let's get in touch</a></button>
+  </a>
+</div>
+
+
+
+
+
+<!-- ...............TIME END............... --> 
+
+
+
+
+
+</body>
+<script src="about.js" defer></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harsh &lt;budhauliya&gt;</title>
+  <meta name="description"
+    content="Harsh Bartoletti - Creative Developer. Merging technical expertise with creativity and aesthetics.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="fav.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="contact.css">
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<body>
+
+  <!-- ...............HEADER START............... -->
+
+
+
+
+  <header>
+
+    <div class="header-title">
+      harsh &lt;<span>budhauliya</span>&gt;
+    </div>
+    <div class="window-controls">
+      <i class="fa-solid fa-minus" onclick="exitFullScreen()"></i>
+      <i class="fa-regular fa-square" onclick="enterFullScreen()"></i>
+      <i class="fa-solid fa-xmark cut-icon"></i>
+    </div>
+  </header>
+
+
+
+  <!-- ...............HEADER END............... -->
+
+
+
+
+
+
+  <!-- ...............NAVIGATION START............... -->
+
+
+  <div class="slide-navigation">
+    <div class="logo">
+      <i class="fa-brands fa-staylinked navlogo"></i>
+    </div>
+
+    <div class="nav-icons">
+      <a href="home.html">
+        <i class="fa-solid fa-house home"></i>
+        <span class="tooltip">home</span>
+      </a>
+      <a href="about.html">
+        <i class="fa-regular fa-address-card about-me"></i>
+        <span class="tooltip">about</span>
+      </a>
+      <a href="project.html">
+        <i class="fa-solid fa-laptop-code project"></i>
+        <span class="tooltip">projects</span>
+      </a>
+      <a href="contact.html">
+        <i class="fa-regular fa-message contact"></i>
+        <span class="tooltip">contact</span>
+      </a>
+    </div>
+
+
+
+    <button id="openBtn">
+      <i class="fa-solid fa-magnifying-glass navsearch"></i>
+    </button>
+
+    <div class="slide-panel" id="slidePanel">
+      <p class="panel-heading">Find <span class="green">anything</span></p>
+      <button id="closeBtn">✖</button>
+
+      <input type="text" class="search-input" placeholder="Search here...">
+
+      <div class="box-row">
+
+          <a href="home.html" class="box green-1" style="text-decoration: none; color: inherit;">
+            <div class="box-header-search home-i">
+              <i class="fa-solid fa-house"></i>
+              home
+            </div>
+            <p>Welcome! Start your journey here!</p>
+          </a>
+
+          <a class="box blue-1" href="about.html" style="text-decoration: none; color: inherit;">
+            <div class="box-header-search aboutme-i">
+              <i class="fa-regular fa-address-card"></i>
+              about
+            </div>
+            <p>Learn more about me and my work.</p>
+          </a>
+
+
+          <a class="box red-1" href="project.html" style="text-decoration: none; color: inherit;">
+            <div class="box-header-search project-i">
+              <i class="fa-solid fa-laptop-code"></i>
+              projects
+            </div>
+            <p>Explore my projects and collaborations.</p>
+          </a>
+      </div>
+
+      <div class="box-row">
+
+
+        <a class="box yellow-1" href="contact.html" style="text-decoration: none; color: inherit;">
+          <div class="box-header-search contact-i">
+            <i class="fa-regular fa-message"></i>
+            contact
+          </div>
+          <p>Explore my projects and collaborations.</p>
+        </a>
+
+
+
+        <a class="box purple-1" href="privacy.html" style="text-decoration: none; color: inherit;">
+          <div class="box-header-search settings-i">
+            <i class="fa-solid fa-gear"></i>
+            settings
+          </div>
+          <p>Explore my projects and collaborations.</p>
+        </a>
+
+        <div class="box-unvisible"></div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="line-main"></div>
+
+
+
+
+  <!-- ...............NAVIGATION END............... -->
+
+
+
+
+
+
+  <!-- ...............MAIN CONTENT START............... -->
+
+  <div class="container">
+    <div class="floating-elements">
+      <span class="float-item">)</span>
+      <span class="float-item">=</span>
+      <span class="float-item">[</span>
+      <span class="float-item">?</span>
+    </div>
+
+
+    <p class="home-main">Home</p>
+    <h1>Do you want to talk about a <span>projects</span>?</h1>
+    <p class="home-para">Whether you have a project you want to work on together or just want us to meet and have a
+      chat, you are in the right place: let's get in touch.</p>
+  </div>
+  <div class="progress-line">
+    <div class="light"></div>
+  </div>
+
+
+
+
+
+
+
+  <!-- ...............MAIN CONTENT END............... -->
+
+
+
+  <!-- ...............contact start............... -->
+
+
+
+
+
+  <section class="project-maincontainer">
+
+    <div class="vertical-line"></div>
+
+    <div class="contact-container" data-aos="fade-up">
+      <div class="nav">
+        <span class="work-navhead">write-me</span>
+        <div class="nav-icons-about">
+          <i class="fa-solid fa-minus"></i>
+          <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark cut-icon"></i>
+        </div>
+      </div>
+      <div class="contact-heading">
+        <div class="form-group">
+          <label for="full-name"><span>01</span> full-name <span class="required">*</span></label>
+          <input type="text" id="full-name" name="full-name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="company"><span>02</span> company</label>
+          <input type="text" id="company" name="company" />
+        </div>
+
+        <div class="form-group">
+          <label for="website"><span>03</span> website</label>
+          <input type="text" id="website" name="website" />
+        </div>
+
+        <div class="form-group">
+          <label for="email"><span>04</span> email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="your-message"><span>05</span> your-message <span class="required">*</span></label>
+          <textarea id="your-message" name="your-message" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="privacy-policy" required />
+          <label for="privacy-policy">I agree with the terms of the <a href="#">Privacy Policy</a></label>
+        </div>
+
+        <button class="animated-btn">
+          <span class="char">a</span>
+          <span class="char">b</span>
+          <span class="char">o</span>
+          <span class="char">u</span>
+          <span class="char">t</span>
+          <span class="char">–</span>
+          <span class="char">m</span>
+          <span class="char">e</span>
+          <span class="arrow">→</span>
+        </button>
+
+      </div>
+
+      <div class="vertical-line-bottom"></div>
+
+  </section>
+
+
+
+
+
+
+  <!-- ...............contact end ............... -->
+
+
+
+  <!-- ...............footer start ............... -->
+
+
+
+  <footer class="footer">
+    <div class="footer-left">
+
+      <div class="footer-logo">
+        <i class="fa-brands fa-staylinked navlogo"></i>
+        harsh &lt;<span>budhauliya</span>&gt;
+      </div>
+      <div class="footer-copyright">
+        &copy; 2024 Harsh Budhauliya | Freelance Developer - All rights reserved.
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="home.html">home</a>
+        <a href="about.html">about</a>
+        <a href="project.html">projects</a>
+        <a href="contact.html">contact</a>
+      </div>
+
+      <div class="footer-privacy">
+        <a href="privacy.html">privacy Policy</a>
+        <a href="terms.html">terms of Service</a>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ...............footer end............... -->
+
+
+
+  <!-- ...............TIME START............... -->
+
+
+
+
+  <div class="bottom-bar" id="location-time">
+    Based in India • Local time <span id="india-time">--:--</span>
+    <a href="contact.html" class="cover-link">
+      <button class="time-button"><a href="contact.html">Let's get in touch</a></button>
+    </a>
+  </div>
+
+
+
+
+  <!-- ...............TIME END............... -->
+
+
+
+
+
+</body>
+<script src="contact.js" defer></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+
+</html>
