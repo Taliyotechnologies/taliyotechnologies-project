@@ -158,7 +158,9 @@ header span {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: #222;
+  background: #0606062f;
+  backdrop-filter: blur(8px);
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
   padding: 20px;
   border-radius: 10px;
   opacity: 0;
@@ -175,7 +177,7 @@ header span {
 }
 
 .menu a {
-  color: white;
+  color: #00ff84;
   text-decoration: none;
   font-size: 18px;
 }
@@ -199,11 +201,13 @@ header span {
   }
   .hamburger {
     display: inline-block;
+    z-index: 3000;
   }
   .menu-wrapper {
     position: relative;
     bottom: 1.3rem;
     scale: 0.7;
+    z-index: 1;
   }
 
   .menu {
@@ -213,7 +217,9 @@ header span {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: #222;
+    background: #06060699;
+     backdrop-filter: blur(8px);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
     padding: 20px;
     border-radius: 10px;
     opacity: 0;
@@ -256,7 +262,9 @@ header span {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: #222;
+    background: #06060699;
+    backdrop-filter: blur(8px);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
     padding: 20px;
     border-radius: 10px;
     opacity: 0;
@@ -1512,6 +1520,7 @@ header span {
   .project-heading {
     font-size: 2rem;
     margin: 2rem auto;
+    margin-top: -2.5rem;
   }
   .project-card {
     scale: 0.8; 
@@ -1545,6 +1554,7 @@ header span {
     padding: 10px 15px;
     font-size: 0.8rem;
     left: 38%;
+    margin-top: -1rem;
   }
 }
 
@@ -1885,6 +1895,240 @@ header span {
   color: black;
 }
 
+@media (min-width: 361px) and (max-width: 480px) {
+  .testimonial-heading {
+    font-size: 2rem;
+    margin: 2rem auto;
+    margin-top: 0.5rem;
+    width: 97%;
+    scale: 0.9;
+  }
+  .testimonial {
+    flex-direction: column;
+    align-items: justify;
+    scale: 0.9;
+  }
+  .nav-testimonial{
+    display: none;
+  }
+  .testimonial-text{
+    font-size: 0.8rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+  }
+  .testimonial-text p {
+    margin: 0.5rem;
+  }
+  .testimonial-navhead{
+    margin-right: 1rem;
+    padding: 7px 0px;
+    font-size: 1rem;
+  }
+ 
+  .collaborations {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -9rem;
+  }
+  .colabs {
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  .client-image-last {
+    height: 5rem;
+    width: 100%;
+    max-width: 5rem;
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  .client-heading {
+    font-size: 1.5rem;
+    width: 88%;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .client-image-last img {
+    height: 5rem;
+    width: 5rem;
+    padding: 1px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+ 
+  .testimonial-navhead {
+    margin-right: 5rem;
+    padding: 7px 0px;
+    font-size: 1rem;
+  }
+  .client-navhead-last {
+    margin-right: 13rem;
+    padding: 7px 15px !important;
+    font-size: 1rem;
+  }
+  .client-button {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    left: 5%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .testimonial-heading {
+    font-size: 2rem;
+    margin: 3rem auto;
+    width: 70%;
+    scale: 1;
+  }
+  .testimonial {
+    flex-direction: column;
+    align-items: justify;
+    scale: 0.9;
+  }
+  .nav-testimonial{
+    display: none;
+  }
+  .testimonial-text{
+    font-size: 0.9rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+  }
+  .testimonial-text p {
+    margin: 0.5rem;
+  }
+  .testimonial-navhead{
+    margin-right: 1rem;
+    padding: 7px 0px;
+    font-size: 1rem;
+  }
+ 
+  .collaborations {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -6rem;
+  }
+
+  .colabs {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .client-image-last {
+    height: 6rem;
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  .client-heading {
+    font-size: 1.9rem;
+    width: 88%;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .client-image-last img {
+    height: 6rem;
+    width: 6rem;
+    padding: 1px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .client-navhead-last {
+    margin-right: 20rem;
+    padding: 7px 15px !important;
+    font-size: 1rem;
+  }
+  .client-button {
+    padding: 13px 18px;
+    font-size: 0.9rem;
+    left: 5%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .testimonial-heading {
+    font-size: 2.5rem;
+    margin: 3rem auto;
+    width: 70%;
+    scale: 1;
+  }
+  .testimonial {
+    flex-direction: column;
+    align-items: justify;
+    scale: 0.8;
+    margin-left: 2.5rem;
+  }
+  .nav-testimonial{
+    display: none;
+  }
+  .testimonial-text{
+    font-size: 1rem;
+    margin: 1rem;
+    margin-bottom: 3rem;
+  }
+  .testimonial-text p {
+    margin: 0.5rem;
+  }
+  .testimonial-navhead{
+    margin-right: 1rem;
+    padding: 7px 0px;
+    font-size: 1rem;
+  }
+ 
+  .collaborations {
+    width: 90%;
+    margin-left: 8%;
+    margin-top: -6rem;
+    scale: 0.9;
+  }
+
+  .colabs {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  
+  .client-image-last {
+    height: 7rem;
+    width: 100%;
+    max-width: 7rem;
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  .client-heading {
+    font-size: 2.2rem;
+    width: 88%;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .client-image-last img {
+    height: 7rem;
+    width: 7rem;
+    padding: 1px;
+    border-radius: 50%;
+    overflow: hidden;
+   }
+  
+   .client-navhead-last {
+     margin-right: 26.5rem ;
+     padding:7px ;
+     font-size :1.2rem ;
+   }
+  
+   .client-button {
+     left :5% ;
+     padding :13px ;
+     font-size :0.9rem ;
+     margin-bottom :2rem ;
+   }
+}
 /* ..................testimonial end................... */
 
 /* ..................footer start................... */
@@ -1962,6 +2206,99 @@ footer {
 .footer-privacy a:visited {
   color: #b0b0b0;
 }
+
+@media (min-width: 361px) and (max-width: 480px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    scale: 1;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+  .footer-logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  .footer-links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8;
+  }
+  .footer-copyright{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    margin-left: 0;
+  }
+  
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    scale: 1;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+  .footer-logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  .footer-links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9;
+  }
+  .footer-copyright{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.55rem;
+    scale: 0.9;
+    width: 98.5%;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+  .footer-logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  .footer-links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1;
+  }
+  .footer-copyright{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+}
+
 
 /* ..................footer end................... */
 
