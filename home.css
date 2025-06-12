@@ -1508,6 +1508,127 @@ header span {
   color: black;
 }
 
+@media (min-width: 361px) and (max-width: 480px){
+  .project-heading {
+    font-size: 2rem;
+    margin: 2rem auto;
+  }
+  .project-card {
+    scale: 0.8; 
+    width: 100%;
+    max-width: 98%;
+    margin-left: -1.5rem;
+    margin-top: -1rem;
+  }
+  .project-icons span {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .project-title {
+    font-size: 1.5rem;
+  }
+  .project-tags span {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .project-tags2 span {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .project-preview {
+    width: 300px;
+    right: 8rem;
+    top: 5rem;
+    scale: 1.2;
+  }
+  .project-button {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    left: 38%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px){
+  .project-heading {
+    font-size: 2rem;
+    margin: 3rem auto;
+  }
+  .project-card {
+    scale: 0.8; 
+    width: 100%;
+    max-width: 98%;
+    margin-left: -1.5rem;
+    margin-top: -1rem;
+  }
+  .project-icons span {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .project-title {
+    font-size: 1.9rem;
+  }
+  .project-tags span {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .project-tags2 span {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .project-preview {
+    width: 350px;
+    right: 8rem;
+    top: 5rem;
+    scale: 1.2;
+  }
+  .project-button {
+    padding: 13px 18px;
+    font-size: 0.9rem;
+    left: 38%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px){
+  .project-heading {
+    font-size: 2.5rem;
+    margin: 3rem auto;
+    margin-top: 5rem;
+  }
+  .project-card {
+    scale: 0.8; 
+    width: 100%;
+    max-width: 90%;
+    margin-left: 1rem;
+    margin-top: -1rem;
+  }
+  .project-icons span {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .project-title {
+    font-size: 2.2rem;
+  }
+  .project-tags span {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .project-tags2 span {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    margin-top: -1rem;
+  }
+  .project-preview {
+    width: 400px;
+    right: 8rem;
+    top: 5rem;
+    scale: 1.2;
+  }
+  .project-button {
+    left: 42%;
+  }
+}
+
+
 /* ..................project end................... */
 
 /* ..................testimonial start................... */
