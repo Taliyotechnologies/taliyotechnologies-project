@@ -39,15 +39,30 @@
 
   <header>
 
-    <div class="header-title">
-      harsh &lt;<span>budhauliya</span>&gt;
+     <div class="header-title">
+        harsh &lt;<span>budhauliya</span>&gt;
     </div>
     <div class="window-controls">
       <i class="fa-solid fa-minus" onclick="exitFullScreen()"></i>
       <i class="fa-regular fa-square" onclick="enterFullScreen()"></i>
-      <i class="fa-solid fa-xmark cut-icon"></i>
+        <i class="fa-solid fa-xmark cut-icon"></i>
     </div>
-  </header>
+    <div class="menu-wrapper">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    
+    <nav class="menu">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">project</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
 
 
@@ -67,7 +82,7 @@
     </div>
 
     <div class="nav-icons">
-  <a href="index.html">
+  <a href="home.html">
     <i class="fa-solid fa-house home"></i>
     <span class="tooltip">home</span>
   </a>
@@ -369,6 +384,8 @@
   <!-- ...............testimonials  start............... -->
 
 
+   
+
   <section id="testimonial-slider-section">
     <h1 class="testimonial-heading">Nice things<span> people say</span> about my work</h1>
 
@@ -376,8 +393,8 @@
 
       <div class="slider-wrapper" id="sliderWrapper">
         <div class="slide">
-          <div class="nav">
-            <span class="client-navhead">hobbies</span>
+          <div class="nav-testimonial">
+            <span class="testimonial-navhead">hobbies</span>
             <div class="nav-icons-about">
               <i class="fa-solid fa-minus"></i>
               <i class="fa-regular fa-square"></i>
@@ -395,14 +412,14 @@
                 approach, clean design, and on-time delivery were truly impressive. I constantly receive compliments
                 from my clients about how professional my website looks. I would 100% recommend Taliyo to anyone looking
                 for high-quality development."</p>
-              <h5>— Anjali Sharma, E-commerce Store Owner</h5>
+              <p>— Anjali Sharma, E-commerce Store Owner</p>
             </div>
           </div>
         </div>
 
         <div class="slide active">
-          <div class="nav">
-            <span class="client-navhead">hobbies</span>
+          <div class="nav-testimonial">
+            <span class="testimonial-navhead">hobbies</span>
             <div class="nav-icons-about">
               <i class="fa-solid fa-minus"></i>
               <i class="fa-regular fa-square"></i>
@@ -419,14 +436,14 @@
                 every detail—from logo design to social media setup—and made sure everything looked consistent and
                 professional. They even helped me with content writing and SEO, which brought real traffic to my site.
                 I'm proud to say my business now has a powerful online presence, all thanks to Taliyo."</p>
-              <h5>— Rohan Mehta, Startup Founder</h5>
+              <p>— Rohan Mehta, Startup Founder</p>
             </div>
           </div>
         </div>
 
         <div class="slide">
-          <div class="nav">
-            <span class="client-navhead">hobbies</span>
+          <div class="nav-testimonial">
+            <span class="testimonial-navhead">hobbies</span>
             <div class="nav-icons-about">
               <i class="fa-solid fa-minus"></i>
               <i class="fa-regular fa-square"></i>
@@ -443,14 +460,14 @@
                 weeks, we started noticing more orders, more calls, and better engagement on our Instagram page. Their
                 strategy was smart, their execution was smooth, and the results were visible. I’m so happy I chose them
                 for this journey and will continue working with them for future growth."</p>
-              <h5>— Priya Verma, Restaurant Owner</h5>
+              <p>— Priya Verma, Restaurant Owner</p>
             </div>
           </div>
         </div>
 
         <div class="slide active">
-          <div class="nav">
-            <span class="client-navhead">hobbies</span>
+          <div class="nav-testimonial">
+            <span class="testimonial-navhead">hobbies</span>
             <div class="nav-icons-about">
               <i class="fa-solid fa-minus"></i>
               <i class="fa-regular fa-square"></i>
@@ -467,14 +484,14 @@
                 development. They created a clean, fast, and easy-to-manage site for me. I can now add properties,
                 manage leads, and update listings on my own. Their work ethic, clarity in communication, and post-launch
                 support was fantastic."</p>
-              <h5>— Sneha Rathi, Boutique Owner</h5>
+              <p>— Sneha Rathi, Boutique Owner</p>
             </div>
           </div>
         </div>
 
         <div class="slide active">
-          <div class="nav">
-            <span class="client-navhead">hobbies</span>
+          <div class="nav-testimonial">
+            <span class="testimonial-navhead">hobbies</span>
             <div class="nav-icons-about">
               <i class="fa-solid fa-minus"></i>
               <i class="fa-regular fa-square"></i>
@@ -491,13 +508,13 @@
                 ad setup. Their designs were modern and fit my style perfectly. Best part? They delivered everything
                 within the promised time. They made my launch smooth and stress-free. If you're starting something new,
                 trust Taliyo—they’ll take care of everything."</p>
-              <h5>— Vikas Agarwal, Real Estate Consultant</h5>
+              <p>— Vikas Agarwal, Real Estate Consultant</p>
             </div>
           </div>
         </div>
 
         <div class="slide active">
-          <div class="nav">
+          <div class="nav-testimonial">
             <span class="client-navhead">hobbies</span>
             <div class="nav-icons-about">
               <i class="fa-solid fa-minus"></i>
@@ -515,7 +532,7 @@
                 every detail—from logo design to social media setup—and made sure everything looked consistent and
                 professional. They even helped me with content writing and SEO, which brought real traffic to my site.
                 I'm proud to say my business now has a powerful online presence, all thanks to Taliyo."</p>
-              <h5>— Priya Verma, Restaurant Owner</h5>
+              <p>— Priya Verma, Restaurant Owner</p>
             </div>
           </div>
         </div>
@@ -524,6 +541,7 @@
     </div>
 
   </section>
+
 
   <section class="collaborations">
     <div class="nav-last">
@@ -591,7 +609,7 @@
 
     <div class="footer-right">
       <div class="footer-links">
-        <a href="index.html">home</a>
+        <a href="home.html">home</a>
         <a href="about.html">about</a>
         <a href="project.html">projects</a>
         <a href="contact.html">contact</a>
