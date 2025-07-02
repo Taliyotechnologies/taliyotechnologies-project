@@ -38,44 +38,74 @@ body {
   }
 
 
+  /* Small devices (phones) */
+@media (max-width: 480px) and (min-width: 320px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+}
+
+/* Large devices (laptops/desktops) */
+@media (min-width: 769px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+}
+
+
+
 
 /* ..................header start................... */
 
 header {
-  width: 94%;
+  width: 98.5%;
   margin: 8px auto;
   padding: 8px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   font: 600 1rem sans-serif;
-  border: 1px solid #80808077 ;
+  border: 1px solid #80808077;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1100;
   background-color: transparent;
+  box-sizing: border-box;
+  border-left: none;
 }
 
 .header-title {
   flex: 1;
   text-align: center;
   margin: 0.2rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 header span {
-color: #eed91be3;
+  color: #cbb21a;
 }
 
 .window-controls {
   display: flex;
   gap: 18px;
+  flex-shrink: 0;
 }
 
 .window-controls i {
   font-size: 0.7rem;
-  color: gray;
+  color: #80808077;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -84,51 +114,187 @@ color: #eed91be3;
   transform: scale(1.3);
 }
 
-@media screen and (max-width: 768px) {
-  header {
-    padding: 8px 12px;
-  }
-  .header-title {
-    font-size: 0.8rem;
-  }
-  .window-controls i {
-    font-size: 0.6rem;
-  }
-  .window-controls {
-    gap: 10px;
-  }
-  .cut-icon {
-    transform: scale(1.2);
-  }
-  .header-title span {
-    font-size: 0.8rem;
-  } 
-  
+.menu-wrapper {
+  position: relative;
+  height: 1px;
 }
 
-@media screen and (max-width: 480px) {
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+  height: 1px;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Transform hamburger to X */
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menu styles */
+.menu {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #0606062f;
+  backdrop-filter: blur(8px);
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+}
+
+/* Show menu when checkbox is checked */
+#menu-toggle:checked ~ .menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.menu a {
+  color: #cbb21a;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Small phones */
+@media (min-width: 361px) and (max-width: 480px) {
   header {
-    padding: 8px 3px;
+    padding: 8px 15px;
+    width: 100%;
+    
   }
+
   .header-title {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     text-align: center;
-    position: relative;
-    left: 1.9rem;
+    margin-left: 2.5rem;
   }
+
   .window-controls i {
-    font-size: 0.5rem;
+    display: none;
   }
-  .window-controls {
-    gap: 8px;
-    margin-right: 0.5rem;
+  .hamburger {
+    display: inline-block;
+    z-index: 3000;
   }
-  .cut-icon {
-    transform: scale(1.1);
+  .menu-wrapper {
+    position: relative;
+    bottom: 1rem;
+    scale: 0.7;
+    z-index: 1;
   }
-  .header-title span {
-    font-size: 0.7rem;
-  } 
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    left: -4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #06060699;
+     backdrop-filter: blur(8px);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+  }
+}
+
+/* Medium phones */
+@media (min-width: 481px) and (max-width: 600px) {
+  header {
+    padding: 8px 20px;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .header-title {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-left: 2.6rem;
+  }
+
+  .window-controls i {
+    display: none;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+  .menu-wrapper {
+    position: relative;
+    bottom: 1rem;
+    scale: 0.7;
+  }
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    left: -4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #06060699;
+    backdrop-filter: blur(8px);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+  }
+}
+
+/* Large phones and tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  header {
+    padding: 9px 20px;
+    width: 100%;
+    max-width: 97%;
+  }
+
+  .header-title {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .window-controls i {
+    font-size: 0.8rem;
+  }
 }
 
 /* ..................header end................... */
@@ -413,58 +579,80 @@ color: #eed91be3;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .slide-navigation {
-    width: 40px;
-    padding: 0;
-    height: 98%;
-  }
-  .slide-navigation .logo {
-    scale: 1.2;
-    margin-top: 7px;
-  }
-  .nav-icons {
-    gap: 10px;
-  }
-  .nav-icons i {
-    font-size: 1.2rem;
-  }
-  .search-icon {
-    scale: 1.2;
-    padding: 5px 8px;
-    position: relative;
-    left: -2px;
-    bottom: 0.2rem;
-  }
-  
-}
+/* Media Queries for Responsive Design */
 
-@media screen and (max-width: 480px) {
+/* Small phones */
+@media (min-width: 361px) and (max-width: 480px) {
   .slide-navigation {
-    width: 35px;
-    padding: 0;
-    height: 98%;
+    display: none;
   }
-  .slide-navigation .logo {
-    scale: 1.2;
-    margin-top: 7px;
-  }
-  .nav-icons {
-    gap: 10px;
-  }
-  .nav-icons i {
+  .navlogo {
     font-size: 1rem;
   }
-  .search-icon {
-    scale: 1.2;
-    padding: 4px 6px;
-    position: relative;
-    left: -2px;
-    bottom: 0.2rem;
+  .home,
+  .project,
+  .aboutme,
+  .contact {
+    font-size: 1rem;
   }
-  
+  #openBtn {
+    padding: 7.5px 7.8px;
+    font-size: 0.9rem;
+    position: relative;
+    top: -0.4rem;
+  }
+  .line-main {
+    display: none;
+  }
 }
 
+/* Medium phones */
+@media (min-width: 481px) and (max-width: 600px) {
+  .slide-navigation {
+    display: none;
+  }
+  .navlogo {
+    font-size: 1rem;
+    position: relative;
+    top: 0.2rem;
+  }
+  .home,
+  .project,
+  .aboutme,
+  .contact {
+    font-size: 1rem;
+  }
+  #openBtn {
+    padding: 7.5px 7.8px;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0.1rem;
+  }
+  .line-main {
+    display: none;
+  }
+}
+
+/* Large phones and tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  .slide-navigation {
+    padding: 3px 4px;
+  }
+  .navlogo {
+    font-size: 0.9rem;
+    margin-bottom: 2.3rem;
+  }
+  .home,
+  .project,
+  .aboutme,
+  .contact {
+    font-size: 0.9rem;
+  }
+  #openBtn {
+    padding: 7.3px 7.3px;
+    font-size: 0.9rem;
+  }
+}
 /* ..................nav end................... */
 
 
@@ -566,62 +754,73 @@ h1 span {
 }
 
 
-@media screen and (max-width: 768px) {
-  .container {
-    height: 80vh;
-  }
+/* Small phones */
+@media (min-width: 361px) and (max-width: 480px) {
   h1 {
-    font-size: 3rem;
-    width: 70%;
-    scale: 1.2;
+    font-size: 1.7rem;
+    width: 65%;
+    scale: 1.5;
   }
   .home-para {
     font-size: 0.9rem;
-    max-width: 400px;
+    width: 88%;
+    margin-top: 2rem;
   }
   .progress-line {
-    height: 80px;
-  }
-  .light {
     height: 50px;
-  }
-  .float-item {
-    font-size: 6rem;
-  }
-  .floating-elements {
-    height: 80vh;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .container {
-    height: 70vh;
-  }
-  h1 {
-    font-size: 2.4rem;
-    width: 75%;
-    scale: 1.09;
-    margin-left: 2rem;
-  }
-  .home-para {
-    font-size: 0.8rem;
-    max-width: 350px;
-    margin-top: 1rem;
-    margin-left: 2rem;
-  }
-  .progress-line {
-    height: 60px;
-    position: relative;
-    bottom: 1.5rem;
-  }
-  .light {
-    height: 40px;
+    top: 50%;
   }
   .float-item {
     font-size: 5rem;
   }
-  
+  .home-main {
+    margin-top: -10rem;
+  }
 }
+
+/* Medium phones */
+@media (min-width: 481px) and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    width: 60%;
+    scale: 1.5;
+  }
+  .home-para {
+    font-size: 0.9rem;
+    width: 88%;
+    margin-top: 2rem;
+  }
+  .progress-line {
+    height: 50px;
+    top: 50%;
+  }
+  .float-item {
+    font-size: 5rem;
+  }
+  .home-main {
+    margin-top: -10rem;
+  }
+}
+
+/* Large phones and tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    width: 60%;
+    margin-left: 2rem;
+  }
+  .home-para {
+    font-size: 0.9rem;
+    width: 60%;
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  .progress-line {
+    height: 80px;
+    top: 68%;
+  }
+}
+
 
 /* ..................main end................... */
 
@@ -859,7 +1058,225 @@ h1 span {
   transform: translateX(-50%);
 }
 
+/* Small phones */
+@media (min-width: 361px) and (max-width: 480px) {
+  .contact-container {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -5rem;
+  }
+  .nav{
+    width: 100%;
+  }
+  .work-navhead{
+    font-size: 1rem;
+    padding: 0.4rem 0.5rem;
+  }
+  .nav-icons-about{
+    font-size: 0.7rem;
+    padding-right: 0.5rem;
+  }
+  .contact-heading{
+    font-size: 1.2rem;
+    margin-top: -1rem;
+    padding: 0.5rem;
+  }
+  .form-section {
+    padding: 1rem;
+  }
+  .form-group {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+  }
+  label {
+    font-size: 0.9rem;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: 85%;
+    margin-left: 0.5rem;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  textarea {
+    width: 85%;
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.6rem;
+    font-size: 0.9rem;
+  }
+  .checkbox-group {
+    font-size: 0.8rem;
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.5rem;
+  }
+  .animated-btn {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .animated-btn span {
+    font-size: 0.8rem;
+  }
+  .vertical-line {
+    height: 15%;
+    bottom: 6rem;
+  }
+  .vertical-line-bottom {
+    bottom: -3.6rem;
+    height: 8%;
 
+  }
+}
+
+/* Medium phones */
+@media (min-width: 481px) and (max-width: 600px){
+  .contact-container {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: -5rem;
+  }
+  .nav{
+    width: 100%;
+  }
+  .work-navhead{
+    font-size: 1rem;
+    padding: 0.4rem 0.5rem;
+  }
+  .nav-icons-about{
+    font-size: 0.7rem;
+    padding-right: 0.5rem;
+  }
+  .contact-heading{
+    font-size: 1.2rem;
+    margin-top: -1rem;
+    padding: 0.5rem;
+  }
+  .form-section {
+    padding: 1rem;
+  }
+  .form-group {
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+  }
+  label {
+    font-size: 0.9rem;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: 90%;
+    margin-left: 0.5rem;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  textarea {
+    width: 90%;
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.6rem;
+    font-size: 0.9rem;
+  }
+  .checkbox-group {
+    font-size: 0.8rem;
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.5rem;
+  }
+  .animated-btn {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .animated-btn span {
+    font-size: 0.8rem;
+  }
+  .vertical-line {
+    height: 15%;
+    bottom: 6rem;
+  }
+  .vertical-line-bottom {
+    bottom: -3.6rem;
+    height: 8%;
+  }
+}
+
+/* Large phones and tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  .contact-container {
+    width: 80%;
+    margin-left: 12.6%;
+    margin-top: 5rem;
+  }
+  .nav{
+    width: 100%;
+  }
+  .work-navhead{
+    font-size: 1rem;
+    padding: 0.4rem 0.5rem;
+  }
+  .nav-icons-about{
+    font-size: 0.7rem;
+    padding-right: 0.5rem;
+  }
+  .contact-heading{
+    font-size: 1.2rem;
+    margin-top: -1rem;
+    padding: 0.5rem;
+  }
+  .form-section {
+    padding: 1rem;
+  }
+  .form-group {
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+  }
+  label {
+    font-size: 0.9rem;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: 90%;
+    margin-left: 0.5rem;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  textarea {
+    width: 90%;
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.6rem;
+    font-size: 0.9rem;
+  }
+  .checkbox-group {
+    font-size: 0.8rem;
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.5rem;
+  }
+  .animated-btn {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .animated-btn span {
+    font-size: 0.8rem;
+  }
+  .vertical-line {
+    height: 15%;
+    bottom: -1rem;
+  }
+  .vertical-line-bottom {
+    bottom: -5.8rem;
+    height: 13%;
+  }
+}
 
 
 /* ..................contacts end................... */
@@ -926,6 +1343,98 @@ footer {
 }
 
 
+@media (min-width: 361px) and (max-width: 480px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    scale: 1;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+  .footer-logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  .footer-links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8;
+  }
+  .footer-copyright{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    margin-left: 0;
+  }
+  
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    scale: 1;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+  .footer-logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  .footer-links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9;
+  }
+  .footer-copyright{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.55rem;
+    scale: 0.9;
+    width: 98.5%;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+  .footer-logo {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  .footer-links {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1;
+  }
+  .footer-copyright{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-left: 0;
+  }
+}
+
 /* ..................footer end................... */
 
 
@@ -974,30 +1483,84 @@ footer {
 }
 
 
-@media screen and (max-width: 768px) {
+/* Small phones */
+@media (min-width: 361px) and (max-width: 480px) {
   .bottom-bar {
-    width: 95%;
-    margin: 0.3px 1.6rem;
-    height: 37px; /* Adjust the height as needed */
-    font-size: 0.8rem;
+    width: 100%;
+    left: 0rem;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    /* Adjust the height as needed */
+    height: 38.5px;
   }
   .time-button {
     display: none;
   }
-  
+  #india-time {
+    font-weight: bold;
+  }
 }
 
-@media screen and (max-width: 480px) {
+/* Medium phones */
+@media (min-width: 481px) and (max-width: 600px) {
   .bottom-bar {
-    width: 95%;
-    margin: 0.3px 0.7rem;
-    height: 34px; /* Adjust the height as needed */
-    font-size: 0.7rem;
+    width: 100%;
+    left: 0rem;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    /* Adjust the height as needed */
+    height: 38.5px;
   }
   .time-button {
     display: none;
   }
-  
+  #india-time {
+    font-weight: bold;
+  }
+}
+
+/* Large phones and tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  .bottom-bar {
+    width: 91%;
+    left: 3rem;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    /* Adjust the height as needed */
+    height: 38.5px;
+  }
+  .time-button {
+    margin-left: 3rem;
+  }
+  #india-time {
+    font-weight: bold;
+    margin-right: 5rem;
+  }
+}
+
+/* Small laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bottom-bar {
+    width: 93%;
+    left: 3.2rem;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    /* Adjust the height as needed */
+    height: 42px;
+  }
+  .time-button {
+    margin-left: 3rem;
+  }
+  #india-time {
+    font-weight: bold;
+    margin-right: 5rem;
+  }
 }
 
 
