@@ -134,7 +134,7 @@ const elements = gsap.utils.toArray('.float-item');
   });
 
 
-  // testimonials slider
+// testimonials slider
 
 
 const wrapper = document.querySelector("#testimonial-slider-section #sliderWrapper");
